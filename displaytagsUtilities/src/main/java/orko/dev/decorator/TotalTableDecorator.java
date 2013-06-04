@@ -18,7 +18,6 @@ import org.apache.commons.logging.LogFactory;
 import org.displaytag.decorator.DisplaytagColumnDecorator;
 import org.displaytag.decorator.TableDecorator;
 import org.displaytag.exception.DecoratorException;
-import org.displaytag.exception.ObjectLookupException;
 import org.displaytag.model.HeaderCell;
 import org.displaytag.model.TableModel;
 import org.displaytag.util.LookupUtil;
