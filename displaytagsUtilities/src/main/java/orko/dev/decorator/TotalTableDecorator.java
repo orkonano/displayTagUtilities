@@ -162,7 +162,9 @@ public class TotalTableDecorator extends TableDecorator {
 				amount = (Number) evaluate(aTotalization.propertyTotalLinked());
 			}
 			return amount;
-		} catch (NoSuchMethodException | SecurityException e) {
+		} catch (NoSuchMethodException e){
+			log.fatal(e.getMessage(), e);
+		}catch (SecurityException e) {
 			log.fatal(e.getMessage(), e);
 		}
 		return null;
@@ -173,7 +175,9 @@ public class TotalTableDecorator extends TableDecorator {
 		Method m = null;
 		try {
 			m = ReflectionUtils.getMethodProperty(this, totalPropertyName);
-		} catch (NoSuchMethodException | SecurityException e) {
+		} catch (NoSuchMethodException e){
+			return false;
+		}catch (SecurityException e) {
 			return false;
 		}
 		return m.isAnnotationPresent(Totalization.class);
