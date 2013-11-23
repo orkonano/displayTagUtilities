@@ -8,6 +8,12 @@
 	<properties>
 		<java.version>7</java.version>
 	</properties>
+	<distributionManagement>
+      <repository>
+          <id>dropbox.repo</id>
+          <url>file:////home/orko/Dropbox/Public/mavenRepo</url>
+      </repository>
+  	</distributionManagement>
 	<dependencies>
 		<dependency>
 			<groupId>displaytag</groupId>
